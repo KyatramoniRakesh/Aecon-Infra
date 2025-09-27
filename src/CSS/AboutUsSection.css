@@ -1,0 +1,58 @@
+/* ===== ABOUT US PREVIEW ===== */
+.about-us-preview {
+  padding: 4rem 1.5rem;
+  background: #fff;
+}
+
+.about-us-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.about-us-image {
+  flex: 1 1 400px;
+}
+
+.about-us-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.about-us-text {
+  flex: 1 1 400px;
+}
+
+.about-us-text h2 {
+  font-size: 2rem;
+  color: #0A1F44;
+  margin-bottom: 1rem;
+}
+
+.about-us-text p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.about-btn {
+  background: #FFB400;
+  color: #0A1F44;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.about-btn:hover {
+  background: #e09b00;
+  color: #fff;
+}

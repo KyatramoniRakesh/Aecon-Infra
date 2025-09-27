@@ -1,0 +1,154 @@
+/* ✅ Keep original Hero banner styling from your first code */
+.service-hero {
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.service-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 1;
+}
+.service-hero .overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+.water-hero {
+  background: url("https://images.unsplash.com/photo-1608261309940-e84e625bcbdd?auto=format&fit=crop&w=1200&q=80")
+    center/cover no-repeat;
+}
+
+/* Intro */
+.service-intro {
+  max-width: 850px;
+  margin: 60px auto;
+  text-align: center;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  padding: 0 20px;
+}
+
+/* Offerings */
+.service-offerings {
+  padding: 50px 10%;
+  text-align: center;
+}
+.service-offerings h2 {
+  color: #0056A6;
+  margin-bottom: 25px;
+}
+.offerings-columns {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+.offerings-columns ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+.offerings-columns li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  position: relative;
+  padding-left: 18px;
+}
+.offerings-columns li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #FFB400;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+  text-align: center;
+}
+.gallery-grid figure {
+  margin: 0;
+}
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 8px;
+  transition: transform 0.4s ease;
+}
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+.gallery-grid figcaption {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Why Choose Us */
+.why-choose {
+  padding: 60px 10%;
+  text-align: center;
+}
+.why-choose h2 {
+  color: #0056A6;
+  margin-bottom: 20px;
+}
+.why-box {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 8px;
+  max-width: 700px;
+  margin: auto;
+}
+.why-box ul {
+  list-style: none;
+  padding: 0;
+}
+.why-box li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  text-align: left;
+}
+
+/* CTA */
+.service-cta {
+  background: #0056A6;
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+  margin-top: 50px;
+}
+.service-cta button {
+  background: #FFB400;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.service-cta button:hover {
+  background: #e6a200;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .offerings-columns {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .why-box ul {
+    text-align: center;
+  }
+}

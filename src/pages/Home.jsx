@@ -5,15 +5,21 @@ import ServicesSection from '../components/ServicesSection';
 import IndustriesSection from '../components/IndustriesSection';
 import ProjectsSection from '../components/ProjectsSection';
 import CTASection from '../components/CTASection';
+import AboutUsSection from '../components/AboutUsSection';
+import WhyChooseUs from '../components/WhyChooseUs';
+import ClientsSection from '../components/ClientsSection';
 
 const Home = () => {
     return (
         <div>
             <Hero />
-            <StatsSection />
+            <AboutUsSection />
             <ServicesSection />
             <IndustriesSection />
             <ProjectsSection />
+            <WhyChooseUs />
+            <StatsSection />
+            <ClientsSection />
             <CTASection />
         </div>
     )

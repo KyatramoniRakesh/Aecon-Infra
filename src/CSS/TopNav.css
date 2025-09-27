@@ -1,20 +1,25 @@
+.bar{
+ background-color: #222;
+ 
+}
 .topbar {
-  background-color: #222;
+  
   color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 6px 40px;
   font-size: 14px;
-  
-  
+  flex-wrap: wrap;
+  /* max-width: 1200px; */
 }
 
 .topbar-left {
   display: flex;
   align-items: center;
   gap: 12px;
-  
+  flex-wrap: wrap;
+  max-width: 70%;
 }
 
 .topbar-left span {
@@ -24,36 +29,62 @@
 }
 
 .topbar-icon {
-  color: #b40000; /* red color for icons */
+  color: #FFB400;
 }
 
 .divider {
   color: #666;
 }
 
+/* Social Icons */
 .topbar-right {
   display: flex;
-  gap: 14px;
+  gap: 10px;
 }
 
 .topbar-right a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
   color: #fff;
-  transition: color 0.3s ease;
+  font-size: 14px;
+  background: #444;
+  transition: all 0.3s ease;
 }
 
-.topbar-right a:hover {
-  color: #b40000; /* hover red */
-}
+/* Hover Brand Colors */
+.social.twitter:hover { background: #1DA1F2; }
+.social.linkedin:hover { background: #0A66C2; }
+.social.facebook:hover { background: #1877F2; }
+.social.youtube:hover { background: #FF0000; }
+.social.instagram:hover { background: #E1306C; }
+.social.whatsapp:hover { background: #25D366; }
 
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
+  
   .topbar {
     flex-direction: column;
-    font-size: 13px;
+    align-items: flex-start;
     padding: 8px 20px;
-    text-align: center;
+    text-align: left;
     gap: 6px;
   }
-  .topbar-right{
-    display: none;
+
+  .topbar-left {
+    flex-direction: row;
+    gap: 6px;
+    max-width: 100%;
+  }
+
+  .divider {
+    display: block;
+  }
+
+  .topbar-right {
+   display: none;
   }
 }
