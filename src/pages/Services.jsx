@@ -63,7 +63,7 @@ const Services = () => {
           )}
         </div>
         <div className="service-image">
-          <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?auto=format&fit=crop&w=800&h=600" alt="Pre-Bid Services" />
+          <img src="../../../public/Images/Pre-Bid Services.jpg" alt="Pre-Bid Services" />
         </div>
       </section>
 
@@ -91,7 +91,7 @@ const Services = () => {
           )}
         </div>
         <div className="service-image">
-          <img src="https://images.unsplash.com/photo-1529429615131-1f2fadcd5aeb?auto=format&fit=crop&w=800&h=600" alt="Contract Execution" />
+          <img src="../../../public/Images/Contract Execution.jpg" alt="Contract Execution" />
         </div>
       </section>
 
@@ -115,7 +115,7 @@ const Services = () => {
           )}
         </div>
         <div className="service-image">
-          <img src="https://images.unsplash.com/photo-1581091012184-2e8e0bc71fa1?auto=format&fit=crop&w=800&h=600" alt="O&M Services" />
+          <img src="../../../public/Images/Post-Commissioning & O&M.jpg" alt="O&M Services" />
         </div>
       </section>
 
@@ -144,11 +144,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="services-cta" data-aos="zoom-in">
-        <h2>Looking for a trusted partner to execute your next project?</h2>
-        <button>Contact Us</button>
-      </section>
+
     </div>
   );
 };

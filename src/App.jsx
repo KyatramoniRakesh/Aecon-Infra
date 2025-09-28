@@ -13,11 +13,16 @@ import ContactUs from './pages/ContactUs';
 import Services from './pages/Services';
 
 import Water from './pages/Services/Water';
+import Projects from './pages/Projects/Projects';
+import ProjectDetail from './pages/Projects/ProjectDetail';
+
+import ScrollToTop from './components/ScrollToTop';
 
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Topbar />
       <Navbar />
 
@@ -26,8 +31,10 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/projects" element={<Projects />} />
 
         <Route path="/services/water" element={<Water />} />
+        <Route path="/projects/:id" element={<ProjectDetail />} />
       </Routes>
 
       <Footer />

@@ -8,7 +8,7 @@ const AboutUsSection = () => {
       <div className="about-us-container">
         <div className="about-us-image">
           <img 
-            src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" 
+            src="../../public/Images/AECON Infra Solutions.jpg" 
             alt="About AECON Infra"
           />
         </div>

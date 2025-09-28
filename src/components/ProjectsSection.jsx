@@ -18,7 +18,7 @@ const projects = [
     id: 3,
     title: "Hydrogen Pilot Plant",
     description: "Green hydrogen production for future energy needs.",
-    image: "https://images.unsplash.com/photo-1505739648872-3dc7f8699a53", 
+    image: "../../public/Images/Hydrogen Pilot Plant.jpg", 
   },
 ];
 

@@ -1,0 +1,122 @@
+
+
+.project-detail-hero {
+height: 70vh;
+background-size: cover;
+background-position: center;
+position: relative;
+}
+
+/* Full dark overlay */
+.project-detail-hero::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.55);
+z-index: 1;
+
+
+}
+
+/* Centered content */
+.project-detail-hero .overlay {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 2;
+color: #fff;
+text-align: center;
+padding: 1rem 2rem;
+
+}
+
+.project-detail-hero h1 {
+font-size: 2.5rem;
+font-weight: 700;
+margin: 0;
+margin-top: 3rem;
+
+}
+
+
+/* Overview Grid */
+.project-detail-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+  background: #f9f9f9;
+}
+.project-detail-overview div {
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+/* Description */
+.project-detail-content {
+  padding: 3rem 2rem;
+  text-align: left;
+}
+.project-detail-content h2 {
+  color: #0056a6;
+  margin-bottom: 1rem;
+}
+.project-detail-content p {
+  line-height: 1.6;
+}
+
+/* Gallery */
+.project-detail-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+.project-detail-gallery img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.project-detail-gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* Back Button */
+.project-detail-back {
+  text-align: center;
+  padding: 2rem;
+}
+.project-detail-back a {
+  color: #0056a6;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid #0056a6;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.project-detail-back a:hover {
+  background: #0056a6;
+  color: #fff;
+}
+
+
+@media (max-width: 768px) {
+
+  .project-detail-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .project-detail-hero .overlay {
+    width: 80%;
+    height: 40%;
+  }
+}

@@ -60,19 +60,13 @@ const Navbar = () => {
             </ul>
           </li>
 
-          {/* Projects Dropdown */}
-          <li
-            className={`dropdown ${activeDropdown === "projects" ? "active" : ""}`}
-            onClick={() => toggleDropdown("projects")}
-          >
-            <span>
-              Projects <RiArrowDropDownLine className="nav-drop-icons" />
-            </span>
-            <ul className="dropdown-menu">
-              <li><Link to="/projects/completed" onClick={() => setIsOpen(false)}>Completed</Link></li>
-              <li><Link to="/projects/ongoing" onClick={() => setIsOpen(false)}>Ongoing</Link></li>
-            </ul>
+          {/* Projects Link */}
+          <li>
+            <Link to="/projects" onClick={() => setIsOpen(false)}>
+              Projects
+            </Link>
           </li>
+
 
           <li>
             <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
