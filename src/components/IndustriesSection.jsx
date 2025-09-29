@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "../CSS/IndustriesSection.css";
 
 const industries = [
@@ -35,13 +37,25 @@ const industries = [
 ];
 
 const IndustriesSection = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <section className="industries">
       <div className="industries-container">
-        <h2 className="section-title">Sectors We Serve</h2>
-        <div className="industries-grid">
-          {industries.map((industry) => (
-            <div key={industry.id} className="industry-card">
+        <h2 className="section-title" data-aos="fade-up">
+          Sectors We Serve
+        </h2>
+        <div className="industries-grid" data-aos="fade-down">
+          {industries.map((industry, index) => (
+            <div
+              key={industry.id}
+              className="industry-card"
+              data-aos="zoom-in"
+              data-aos-delay={index * 150}
+
+            >
               <div className="industry-icon">{industry.icon}</div>
               <h3>{industry.title}</h3>
               <p>{industry.description}</p>

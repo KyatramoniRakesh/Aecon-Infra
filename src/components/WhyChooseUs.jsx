@@ -1,3 +1,4 @@
+// WhyChooseUs.jsx
 import React from "react";
 import "../CSS/WhyChooseUs.css";
 
@@ -5,7 +6,8 @@ const points = [
   {
     id: 1,
     title: "Experienced Team",
-    description: "Decades of combined expertise in engineering & project management.",
+    description:
+      "Decades of combined expertise in engineering & project management.",
     icon: "👷‍♂️",
   },
   {
@@ -17,7 +19,8 @@ const points = [
   {
     id: 3,
     title: "Quality & Safety",
-    description: "Adhering to international standards with strong safety practices.",
+    description:
+      "Adhering to international standards with strong safety practices.",
     icon: "🛡️",
   },
   {
@@ -34,8 +37,12 @@ const WhyChooseUs = () => {
       <div className="why-us-container">
         <h2 className="section-title">Why Choose Us</h2>
         <div className="why-us-grid">
-          {points.map((point) => (
-            <div key={point.id} className="why-us-card">
+          {points.map((point, index) => (
+            <div
+              key={point.id}
+              className={`why-us-card ${index % 2 === 0 ? "slide-left" : "slide-right"}`}
+              style={{ animationDelay: `${index * 0.2}s` }}
+            >
               <div className="why-us-icon">{point.icon}</div>
               <h3>{point.title}</h3>
               <p>{point.description}</p>

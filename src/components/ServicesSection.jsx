@@ -1,3 +1,4 @@
+
 import React from "react";
 import "../CSS/ServicesSection.css";
 
@@ -31,8 +32,12 @@ const ServicesSection = () => {
       <div className="services-container">
         <h2 className="section-title">Our Services</h2>
         <div className="services-grid">
-          {services.map((service) => (
-            <div key={service.id} className="service-card">
+          {services.map((service, index) => (
+            <div
+              key={service.id}
+              className="service-card"
+              style={{ animationDelay: `${index * 0.2}s` }}
+            >
               <div className="service-icon">{service.icon}</div>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
@@ -45,3 +50,4 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
+
