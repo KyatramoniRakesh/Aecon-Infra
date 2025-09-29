@@ -129,15 +129,15 @@ const AboutUs = () => {
               src="https://dummyimage.com/220x220/0A1F44/fff&text=CEO"
               alt="CEO"
             />
-            <h4>John Doe</h4>
-            <p>Chief Executive Officer</p>
+            <h4>Amit Upagade</h4>
+            <p>Founder</p>
           </div>
           <div className="leader-card">
             <img
               src="https://dummyimage.com/220x220/FFB400/fff&text=CTO"
               alt="CTO"
             />
-            <h4>Jane Smith</h4>
+            <h4>Name</h4>
             <p>Chief Technical Officer</p>
           </div>
         </div>
