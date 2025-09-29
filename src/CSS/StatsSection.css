@@ -24,3 +24,74 @@
   font-size: 1rem;
   color: #333;
 }
+
+/* ===== MEDIA QUERIES ===== */
+
+/* Tablets (<= 1024px) */
+@media (max-width: 1024px) {
+  .stats {
+    padding: 2.5rem 1rem;
+  }
+
+  .stat-box h2 {
+    font-size: 2rem;
+  }
+
+  .stat-box p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small Tablets & Large Phones (<= 768px) */
+@media (max-width: 768px) {
+  .stats {
+    padding: 2rem 1rem;
+  }
+
+  .stats-container {
+    gap: 1.5rem;
+  }
+
+  .stat-box h2 {
+    font-size: 1.8rem;
+  }
+
+  .stat-box p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Phones (<= 480px) */
+@media (max-width: 480px) {
+  .stats {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .stats-container {
+    grid-template-columns: 1fr 1fr; /* 2 stats per row */
+    gap: 1rem;
+  }
+
+  .stat-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .stat-box p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra Small Devices (<= 360px) */
+@media (max-width: 360px) {
+  .stats-container {
+    grid-template-columns: 1fr; /* single column */
+  }
+
+  .stat-box h2 {
+    font-size: 1.3rem;
+  }
+
+  .stat-box p {
+    font-size: 0.8rem;
+  }
+}

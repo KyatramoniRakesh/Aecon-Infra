@@ -6,12 +6,23 @@ import "../../CSS/Pages/Projects.css";
 import ClientsSection from "../../components/ClientsSection";
 import StatsSection from "../../components/StatsSection";
 
+
+import ProjectsBanner from "../../../public/images/projects/a.jpg";
+import Project1 from "../../../public/images/projects/a.jpg";
+import Project2 from "../../../public/images/projects/b.jpg";
+import Project3 from "../../../public/images/projects/c.jpg";
+import Project4 from "../../../public/images/projects/d.jpg";
+import Project5 from "../../../public/images/projects/e.jpg";
+
+
+
+
 const allProjects = [
   {
     id: 1,
     title: "60 MLD Sewage Treatment Plant – Chennai",
     category: "Completed",
-    img: "../../../public/images/projects/a.jpg",
+    img: Project1,
     location: "Chennai, Tamil Nadu",
     badge: "Completed",
   },
@@ -19,7 +30,7 @@ const allProjects = [
     id: 2,
     title: "Metro Rail Elevated Viaduct – Hyderabad",
     category: "Ongoing",
-    img: "../../../public/images/projects/b.jpg",
+    img: Project2,
     location: "Hyderabad, Telangana",
     badge: "Ongoing",
   },
@@ -27,7 +38,7 @@ const allProjects = [
     id: 3,
     title: "Smart City Development – Visakhapatnam",
     category: "Major",
-    img: "../../../public/images/projects/c.jpg",
+    img: Project3,
     location: "Visakhapatnam, AP",
     badge: "Major",
   },
@@ -35,7 +46,7 @@ const allProjects = [
     id: 4,
     title: "National Highway Expansion – NH16",
     category: "Completed",
-    img: "../../../public/images/projects/d.jpg",
+    img: Project4,
     location: "Andhra Pradesh",
     badge: "Completed",
   },
@@ -43,7 +54,7 @@ const allProjects = [
     id: 5,
     title: "Industrial Effluent Treatment Plant – Gujarat",
     category: "Completed",
-    img: "../../../public/images/projects/e.jpg",
+    img: Project5,
     location: "Vadodara, Gujarat",
     badge: "Completed",
   },
@@ -64,7 +75,9 @@ const Projects = () => {
   return (
     <div className="projects-page">
       {/* Hero */}
-      <section className="projects-hero" data-aos="fade-up">
+      <section className="projects-hero" data-aos="fade-up"
+        style={{ background: `url(${ProjectsBanner}) no-repeat center/cover` }}>
+
         <div className="overlay">
           <h1 data-aos="fade-down">Our Projects</h1>
           <p data-aos="zoom-in">Building tomorrow’s infrastructure today</p>
@@ -115,11 +128,11 @@ const Projects = () => {
 
       {/* Statistics */}
       <StatsSection />
-      
+
       {/* Featured Project */}
       <section className="featured-project" data-aos="fade-right">
         <img
-          src="../../../public/images/projects/c.jpg"
+          src={Project3}
           alt="Featured Project"
         />
         <div className="featured-info" data-aos="fade-left">

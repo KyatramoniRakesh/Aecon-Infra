@@ -1,6 +1,6 @@
 import React from "react";
 import "../CSS/AboutUsSection.css";
-
+import aeconImg from "../../public/Images/AECON Infra Solutions.jpg";
 const AboutUsSection = () => {
   return (
     <section className="about-us-preview">
@@ -8,7 +8,7 @@ const AboutUsSection = () => {
       <div className="about-us-container">
         <div className="about-us-image">
           <img 
-            src="../../public/Images/AECON Infra Solutions.jpg" 
+            src= {aeconImg}
             alt="About AECON Infra"
           />
         </div>

@@ -2,6 +2,11 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import "../../CSS/Pages/ProjectDetails.css";
 
+import aImg from "../../../public/images/projects/a.jpg";
+import bImg from "../../../public/images/projects/b.jpg";
+import cImg from "../../../public/images/projects/c.jpg";
+import dImg from "../../../public/images/projects/d.jpg";
+
 const projectData = {
   1: {
     title: "Water Treatment Plant",
@@ -11,13 +16,13 @@ const projectData = {
     value: "₹120 Cr",
     duration: "18 Months",
     sector: "Water Solutions",
-    img: "../../../public/images/projects/a.jpg",
+    img: aImg,
     description:
       "AECON Infra successfully implemented a state-of-the-art Water Treatment Plant ensuring sustainable water reuse and compliance with environmental norms. The project reduced freshwater consumption by 60% and achieved Zero Liquid Discharge (ZLD).",
     gallery: [
-      "../../../public/images/projects/a.jpg",
-      "../../../public/images/projects/b.jpg",
-      "../../../public/images/projects/c.jpg",
+      aImg,
+      bImg,
+      cImg,
     ],
   },
   2: {
@@ -28,12 +33,12 @@ const projectData = {
     value: "₹500 Cr",
     duration: "3 Years",
     sector: "Infrastructure",
-    img: "../../../public/images/projects/b.jpg",
+    img: bImg,
     description:
       "A landmark metro infrastructure project aimed at transforming urban mobility with sustainable design and advanced engineering solutions.",
     gallery: [
-      "../../../public/images/projects/b.jpg",
-      "../../../public/images/projects/d.jpg",
+      bImg,
+      dImg,
     ],
   },
   3: {
@@ -44,12 +49,12 @@ const projectData = {
     value: "₹800 Cr",
     duration: "5 Years",
     sector: "Urban Infrastructure",
-    img: "../../../public/images/projects/c.jpg",
+    img: cImg,
     description:
       "AECON Infra played a pivotal role in Smart City initiatives including digital infrastructure, sustainable water systems, and renewable energy integration.",
     gallery: [
-      "../../../public/images/projects/c.jpg",
-      "../../../public/images/projects/a.jpg",
+      cImg,
+      aImg,
     ],
   },
   4: {
@@ -60,12 +65,12 @@ const projectData = {
     value: "₹300 Cr",
     duration: "2 Years",
     sector: "Transportation",
-    img: "../../../public/images/projects/d.jpg",
+    img: dImg,
     description:
       "AECON successfully executed a highway expansion project ensuring reduced travel time, improved safety, and durable road quality.",
     gallery: [
-      "../../../public/images/projects/d.jpg",
-      "../../../public/images/projects/b.jpg",
+      dImg,
+      bImg,
     ],
   },
 };

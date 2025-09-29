@@ -1,13 +1,20 @@
 import React from "react";
 import "../CSS/ClientsSection.css";
 
+import LogoS from "../../public/images/Clients/S.png";
+import LogoAurobindo from "../../public/images/Clients/Aurobindo.png";
+import LogoModern from "../../public/images/Clients/Modern.png";
+import LogoTranstroy from "../../public/images/Clients/Transtroy.png";
+import LogoWordmark from "../../public/images/Clients/Wordmark.png";
+import LogoW from "../../public/images/Clients/W.png";
+
 const clients = [
-  { id: 1, name: "Client 1", logo: "../../public/images/Clients/S.png" },
-  { id: 2, name: "Client 2", logo: "../../public/images/Clients/Aurobindo.png" },
-  { id: 3, name: "Client 3", logo: "../../public/images/Clients/Modern.png" },
-  { id: 4, name: "Client 4", logo: "../../public/images/Clients/Transtroy.png" },
-  { id: 5, name: "Client 5", logo: "../../public/images/Clients/Wordmark.png" },
-  { id: 6, name: "Client 6", logo: "../../public/images/Clients/W.png" },
+  { id: 1, name: "Client 1", logo: LogoS },
+  { id: 2, name: "Client 2", logo: LogoAurobindo },
+  { id: 3, name: "Client 3", logo: LogoModern },
+  { id: 4, name: "Client 4", logo: LogoTranstroy },
+  { id: 5, name: "Client 5", logo: LogoWordmark },
+  { id: 6, name: "Client 6", logo: LogoW },
 ];
 
 const ClientsSection = () => {

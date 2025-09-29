@@ -1,7 +1,7 @@
 .projects-hero {
 position: relative;
 height: 400px;
-background: url("../../../public/images/projects/a.jpg") center/cover no-repeat;
+/* background: url("../../../public/images/projects/a.jpg") center/cover no-repeat; */
 color: #fff;
 text-align: center;
 }

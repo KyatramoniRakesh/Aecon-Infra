@@ -1,5 +1,6 @@
 import React from "react";
 import "../CSS/ProjectsSection.css";
+import HydrogenImg from "../../Public/images/Hydrogen Pilot Plant.jpg";
 
 const projects = [
   {
@@ -18,7 +19,7 @@ const projects = [
     id: 3,
     title: "Hydrogen Pilot Plant",
     description: "Green hydrogen production for future energy needs.",
-    image: "../../public/Images/Hydrogen Pilot Plant.jpg", 
+    image: HydrogenImg, 
   },
 ];
 
