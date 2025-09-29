@@ -1,6 +1,6 @@
 import React from "react";
 import "../CSS/ProjectsSection.css";
-import HydrogenImg from "../../Public/images/Hydrogen Pilot Plant.jpg";
+import HydrogenImg from "../images/Hydrogen Pilot Plant.jpg";
 
 const projects = [
   {

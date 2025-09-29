@@ -1,12 +1,12 @@
 import React from "react";
 import "../CSS/ClientsSection.css";
 
-import LogoS from "../../public/images/Clients/S.png";
-import LogoAurobindo from "../../public/images/Clients/Aurobindo.png";
-import LogoModern from "../../public/images/Clients/Modern.png";
-import LogoTranstroy from "../../public/images/Clients/Transtroy.png";
-import LogoWordmark from "../../public/images/Clients/Wordmark.png";
-import LogoW from "../../public/images/Clients/W.png";
+import LogoS from "../images/Clients/S.png";
+import LogoAurobindo from "../images/Clients/Aurobindo.png";
+import LogoModern from "../images/Clients/Modern.png";
+import LogoTranstroy from "../images/Clients/Transtroy.png";
+import LogoWordmark from "../images/Clients/Wordmark.png";
+import LogoW from "../images/Clients/W.png";
 
 const clients = [
   { id: 1, name: "Client 1", logo: LogoS },

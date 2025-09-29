@@ -7,12 +7,12 @@ import ClientsSection from "../../components/ClientsSection";
 import StatsSection from "../../components/StatsSection";
 
 
-import ProjectsBanner from "../../../public/images/projects/a.jpg";
-import Project1 from "../../../public/images/projects/a.jpg";
-import Project2 from "../../../public/images/projects/b.jpg";
-import Project3 from "../../../public/images/projects/c.jpg";
-import Project4 from "../../../public/images/projects/d.jpg";
-import Project5 from "../../../public/images/projects/e.jpg";
+import ProjectsBanner from "../../images/projects/a.jpg";
+import Project1 from "../../images/projects/a.jpg";
+import Project2 from "../../images/projects/b.jpg";
+import Project3 from "../../images/projects/c.jpg";
+import Project4 from "../../images/projects/d.jpg";
+import Project5 from "../..//images/projects/e.jpg";
 
 
 

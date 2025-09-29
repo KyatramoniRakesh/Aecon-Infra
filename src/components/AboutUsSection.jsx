@@ -1,6 +1,6 @@
 import React from "react";
 import "../CSS/AboutUsSection.css";
-import aeconImg from "../../public/Images/AECON Infra Solutions.jpg";
+import aeconImg from "../Images/AECON Infra Solutions.jpg";
 const AboutUsSection = () => {
   return (
     <section className="about-us-preview">
