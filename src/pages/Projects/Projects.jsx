@@ -7,7 +7,6 @@ import ClientsSection from "../../components/ClientsSection";
 import StatsSection from "../../components/StatsSection";
 
 
-import ProjectsBanner from "../../Images/projects/a.jpg";
 import Project1 from "../../Images/projects/a.jpg";
 import Project2 from "../../Images/projects/b.jpg";
 import Project3 from "../../Images/projects/c.jpg";
@@ -76,7 +75,7 @@ const Projects = () => {
     <div className="projects-page">
       {/* Hero */}
       <section className="projects-hero" data-aos="fade-up"
-        style={{ background: `url(${ProjectsBanner}) no-repeat center/cover` }}>
+        style={{ background: `url(${Project1}) no-repeat center/cover` }}>
 
         <div className="overlay">
           <h1 data-aos="fade-down">Our Projects</h1>
