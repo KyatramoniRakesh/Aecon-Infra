@@ -3,9 +3,9 @@ import { useParams, Link } from "react-router-dom";
 import "../../CSS/Pages/ProjectDetails.css";
 
 import aImg from "../../Images/Projects/a.jpg";
-import bImg from "../../images/projects/b.jpg";
-import cImg from "../../images/projects/c.jpg";
-import dImg from "../../images/projects/d.jpg";
+import bImg from "../../Images/projects/b.jpg";
+import cImg from "../../Images/projects/c.jpg";
+import dImg from "../../Images/projects/d.jpg";
 
 const projectData = {
   1: {
