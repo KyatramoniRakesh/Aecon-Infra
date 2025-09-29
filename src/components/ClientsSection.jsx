@@ -2,12 +2,12 @@ import React from "react";
 import "../CSS/ClientsSection.css";
 
 const clients = [
-  { id: 1, name: "Client 1", logo: "https://dummyimage.com/140x60/0A1F44/fff&text=Client+1" },
-  { id: 2, name: "Client 2", logo: "https://dummyimage.com/140x60/FFB400/fff&text=Client+2" },
-  { id: 3, name: "Client 3", logo: "https://dummyimage.com/140x60/0056A6/fff&text=Client+3" },
-  { id: 4, name: "Client 4", logo: "https://dummyimage.com/140x60/444/fff&text=Client+4" },
-  { id: 5, name: "Client 5", logo: "https://dummyimage.com/140x60/888/fff&text=Client+5" },
-  { id: 6, name: "Client 6", logo: "https://dummyimage.com/140x60/222/fff&text=Client+6" },
+  { id: 1, name: "Client 1", logo: "../../public/images/Clients/S.png" },
+  { id: 2, name: "Client 2", logo: "../../public/images/Clients/Aurobindo.png" },
+  { id: 3, name: "Client 3", logo: "../../public/images/Clients/Modern.png" },
+  { id: 4, name: "Client 4", logo: "../../public/images/Clients/Transtroy.png" },
+  { id: 5, name: "Client 5", logo: "../../public/images/Clients/Wordmark.png" },
+  { id: 6, name: "Client 6", logo: "../../public/images/Clients/W.png" },
 ];
 
 const ClientsSection = () => {

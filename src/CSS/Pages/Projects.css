@@ -176,33 +176,6 @@ text-decoration: none;
   margin-bottom: 5px;
 }
 
-.clients-section {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.clients-section h2 {
-  margin-bottom: 20px;
-  color: #0056a6;
-}
-
-.clients-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.clients-logos img {
-  height: 50px;
-  object-fit: contain;
-  filter: grayscale(100%);
-  transition: filter 0.3s;
-}
-
-.clients-logos img:hover {
-  filter: grayscale(0);
-}
 
 /* Responsive */
 @media (max-width: 768px) {

@@ -8,12 +8,18 @@ const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-  // Handle window resize
+  // Update isMobile state on window resize
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // Close mobile menu on route change or link click
+  const closeMenu = () => {
+    setIsOpen(false);
+    setActiveDropdown(null);
+  };
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -28,48 +34,86 @@ const Navbar = () => {
       <div className="navbar-container">
         {/* Logo */}
         <div className="logo">
-          <Link to="/">AECON INFRA</Link>
+          <Link to="/" onClick={closeMenu}>
+            AECON INFRA
+          </Link>
         </div>
 
-        {/* Links */}
+        {/* Nav Links */}
         <ul className={`nav-links ${isOpen ? "open" : ""}`}>
           <li>
-            <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
+            <Link to="/" onClick={closeMenu}>
+              Home
+            </Link>
           </li>
 
           <li>
-            <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
+            <Link to="/about" onClick={closeMenu}>
+              About
+            </Link>
           </li>
 
           {/* Services Dropdown */}
           <li
-            className={`dropdown ${activeDropdown === "services" ? "active" : ""}`}
+            className={`dropdown ${
+              activeDropdown === "services" ? "active" : ""
+            }`}
             onClick={() => toggleDropdown("services")}
+            aria-haspopup="true"
+            aria-expanded={activeDropdown === "services" ? "true" : "false"}
           >
             <span>
               Services <RiArrowDropDownLine className="nav-drop-icons" />
             </span>
             <ul className="dropdown-menu">
-              <li><Link to="/services" onClick={() => setIsOpen(false)}>All Services</Link></li>
-              <li><Link to="/services/pre-bid" onClick={() => setIsOpen(false)}>Pre-Bid</Link></li>
-              <li><Link to="/services/execution" onClick={() => setIsOpen(false)}>Contract Execution</Link></li>
-              <li><Link to="/services/o-m" onClick={() => setIsOpen(false)}>O&M</Link></li>
-              <li><Link to="/services/water" onClick={() => setIsOpen(false)}>Water & Wastewater</Link></li>
-              <li><Link to="/services/power" onClick={() => setIsOpen(false)}>Power Plants</Link></li>
-              <li><Link to="/services/pharma" onClick={() => setIsOpen(false)}>Pharma & Biotech</Link></li>
+              <li>
+                <Link to="/services" onClick={closeMenu}>
+                  All Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/pre-bid" onClick={closeMenu}>
+                  Pre-Bid
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/execution" onClick={closeMenu}>
+                  Contract Execution
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/o-m" onClick={closeMenu}>
+                  O&amp;M
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/water" onClick={closeMenu}>
+                  Water &amp; Wastewater
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/power" onClick={closeMenu}>
+                  Power Plants
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/pharma" onClick={closeMenu}>
+                  Pharma &amp; Biotech
+                </Link>
+              </li>
             </ul>
           </li>
 
-          {/* Projects Link */}
           <li>
-            <Link to="/projects" onClick={() => setIsOpen(false)}>
+            <Link to="/projects" onClick={closeMenu}>
               Projects
             </Link>
           </li>
 
-
           <li>
-            <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
+            <Link to="/contact" onClick={closeMenu}>
+              Contact
+            </Link>
           </li>
         </ul>
 
@@ -77,8 +121,17 @@ const Navbar = () => {
         <div
           className={`hamburger ${isOpen ? "active" : ""}`}
           onClick={toggleMenu}
+          aria-label="Toggle Menu"
+          aria-expanded={isOpen}
+          role="button"
+          tabIndex="0"
+          onKeyPress={(e) => {
+            if (e.key === "Enter" || e.key === " ") toggleMenu();
+          }}
         >
-          <span></span><span></span><span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
     </nav>

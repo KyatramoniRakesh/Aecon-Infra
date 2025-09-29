@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../../CSS/Pages/Projects.css";
+import ClientsSection from "../../components/ClientsSection";
+import StatsSection from "../../components/StatsSection";
 
 const allProjects = [
   {
@@ -111,6 +113,9 @@ const Projects = () => {
         ))}
       </div>
 
+      {/* Statistics */}
+      <StatsSection />
+      
       {/* Featured Project */}
       <section className="featured-project" data-aos="fade-right">
         <img
@@ -129,37 +134,10 @@ const Projects = () => {
         </div>
       </section>
 
-      {/* Statistics */}
-      <section className="project-stats" data-aos="fade-up">
-        <div>
-          <h2>50+</h2>
-          <p>Completed Projects</p>
-        </div>
-        <div>
-          <h2>20+</h2>
-          <p>Ongoing Projects</p>
-        </div>
-        <div>
-          <h2>10+</h2>
-          <p>Major Smart City Works</p>
-        </div>
-        <div>
-          <h2>100+</h2>
-          <p>Trusted Clients</p>
-        </div>
-      </section>
+
 
       {/* Clients */}
-      <section className="clients-section" data-aos="zoom-in-up">
-        <h2>Our Clients</h2>
-        <div className="clients-logos">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/L%26T_logo.png" alt="L&T" />
-          <img src="https://1000logos.net/wp-content/uploads/2021/05/Adani-logo.png" alt="Adani" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/GMR_Group_logo.png" alt="GMR" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/NHAI_logo.png" alt="NHAI" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Hyderabad_Metro_logo.png" alt="Hyderabad Metro" />
-        </div>
-      </section>
+      <ClientsSection />
     </div>
   );
 };
