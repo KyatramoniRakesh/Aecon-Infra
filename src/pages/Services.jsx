@@ -1,150 +1,113 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import "../CSS/Pages/Services.css";
-import { FaChevronDown, FaChevronUp, FaIndustry, FaWater, FaCogs, FaLeaf, FaBolt, FaFlask, FaRecycle } from "react-icons/fa";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import {
+  FaProjectDiagram,
+  FaClipboardList,
+  FaCogs,
+  FaWater,
+  FaIndustry,
+  FaSearch,
+  FaChartLine,
+  FaTools,
+} from "react-icons/fa";
+
+const servicesData = [
+  {
+    id: "feasibility",
+    title: "Feasibility & DPR Studies",
+    icon: <FaSearch />,
+    desc: "Comprehensive feasibility analysis and DPRs for water, wastewater, and desalination projects.",
+    image:
+      "https://plus.unsplash.com/premium_photo-1661610778702-371e7bd35cac?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    id: "pretender",
+    title: "Pre-Tender Services",
+    icon: <FaClipboardList />,
+    desc: "Strategic pre-bid planning, partner identification, and proposal support.",
+    image:
+      "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    id: "posttender",
+    title: "Post-Tender Services",
+    icon: <FaProjectDiagram />,
+    desc: "Full project management consultancy after award of contract.",
+    image:
+      "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    id: "consultancy",
+    title: "Consultancy Services",
+    icon: <FaCogs />,
+    desc: "Specialized consultancy for marine works, trenchless crossings, and desal plants.",
+    image:
+      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    id: "epc",
+    title: "EPC of Specialized Projects",
+    icon: <FaIndustry />,
+    desc: "Engineering, procurement, and construction of desalination and treatment plants.",
+    image:
+      "https://images.unsplash.com/photo-1665564807063-d306ea1d7876?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fEVQQyUyMG9mJTIwU3BlY2lhbGl6ZWQlMjBQcm9qZWN0c3xlbnwwfDB8MHx8fDA%3D",
+  },
+  {
+    id: "swro",
+    title: "Specialized SWRO Studies",
+    icon: <FaWater />,
+    desc: "Detailed studies and designs for seawater reverse osmosis projects.",
+    image:
+      "https://plus.unsplash.com/premium_photo-1745056197520-50c8a6bb9f64?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    id: "pmc",
+    title: "Project Management Consultancy",
+    icon: <FaTools />,
+    desc: "Monitoring, review, and optimization of projects from start to finish.",
+    image:
+      "https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    id: "business",
+    title: "Profitability & Business Studies",
+    icon: <FaChartLine />,
+    desc: "Business case development, compliance, costing, and project viability analysis.",
+    image:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
+  },
+];
 
 const Services = () => {
-  const [activeAccordion, setActiveAccordion] = useState(null);
-
-  const toggleAccordion = (index) => {
-    setActiveAccordion(activeAccordion === index ? null : index);
-  };
-
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
-  }, []);
-
   return (
     <div className="services-page">
-      {/* Hero Section */}
-      <section className="services-hero" data-aos="zoom-in">
-        <div className="overlay">
-          <h1>Our Services</h1>
-          <p>Delivering End-to-End Project Solutions Across Industries</p>
-        </div>
-      </section>
-
-      {/* Intro */}
-      <section className="services-intro" data-aos="fade-up">
+      {/* Hero */}
+      <section className="services-hero" >
+        <h1>Our Services</h1>
         <p>
-          At AECON Infra Solutions, we specialize in providing comprehensive lifecycle 
-          services that span Pre-Bid Consultancy, Project Execution, and Post-Commissioning 
-          Support. With decades of expertise, we serve diverse industries including 
-          Water, Power, Oil & Gas, Marine, Food, Pharma, Biotech, and more.
+          With decades of expertise, we deliver consulting, EPC, and project
+          management solutions for large-scale water and infrastructure
+          projects.
         </p>
-        <div className="stats">
-          <div><h2>50+</h2><p>Projects Completed</p></div>
-          <div><h2>20+</h2><p>Years of Expertise</p></div>
-          <div><h2>15+</h2><p>Industries Served</p></div>
-        </div>
       </section>
 
-      {/* Core Lifecycle Services */}
-      <section className="service-block" data-aos="fade-right">
-        <div className="service-text">
-          <h2>Pre-Bid Services</h2>
-          <p>
-            We provide critical pre-bid support, including opportunity identification, 
-            partnerships, cost estimation, and risk analysis.
-          </p>
-          <button onClick={() => toggleAccordion(1)}>
-            Sub-Services {activeAccordion === 1 ? <FaChevronUp /> : <FaChevronDown />}
-          </button>
-          {activeAccordion === 1 && (
-            <ul className="accordion-list">
-              <li>Opportunity Identification & Marketing</li>
-              <li>Liaison & JV Partnership Support</li>
-              <li>Site Visits & Reporting</li>
-              <li>Project Risk Analysis & Mitigation</li>
-              <li>Site Route Studies</li>
-              <li>Costing & Estimation</li>
-            </ul>
-          )}
-        </div>
-        <div className="service-image">
-          <img src="../../../public/Images/Pre-Bid Services.jpg" alt="Pre-Bid Services" />
-        </div>
+      {/* Grid */}
+      <section className="services-grid">
+        {servicesData.map((service) => (
+          <div className="service-card" key={service.id}>
+            <img src={service.image} alt={service.title} />
+            <div className="service-content">
+              <div className="service-icon">{service.icon}</div>
+              <h3>{service.title}</h3>
+              <p>{service.desc}</p>
+              <Link to={`/services/${service.id}`} className="read-more">
+                Read More →
+              </Link>
+            </div>
+          </div>
+        ))}
       </section>
-
-      <section className="service-block reverse" data-aos="fade-left">
-        <div className="service-text">
-          <h2>Contract Execution</h2>
-          <p>
-            From engineering to vendor management and legal support, we execute 
-            projects with quality and precision.
-          </p>
-          <button onClick={() => toggleAccordion(2)}>
-            Sub-Services {activeAccordion === 2 ? <FaChevronUp /> : <FaChevronDown />}
-          </button>
-          {activeAccordion === 2 && (
-            <ul className="accordion-list">
-              <li>Engineering & Design</li>
-              <li>Supply Chain & Vendor Management</li>
-              <li>Contract Management</li>
-              <li>Risk & Safety Management</li>
-              <li>Automation Philosophy</li>
-              <li>Commissioning & Testing</li>
-              <li>Legal & Arbitration Support</li>
-              <li>Civil Works Execution</li>
-            </ul>
-          )}
-        </div>
-        <div className="service-image">
-          <img src="../../../public/Images/Contract Execution.jpg" alt="Contract Execution" />
-        </div>
-      </section>
-
-      <section className="service-block" data-aos="fade-up">
-        <div className="service-text">
-          <h2>Post-Commissioning & O&M</h2>
-          <p>
-            We ensure smooth operations with spare management, logistics, and 
-            operations & maintenance execution.
-          </p>
-          <button onClick={() => toggleAccordion(3)}>
-            Sub-Services {activeAccordion === 3 ? <FaChevronUp /> : <FaChevronDown />}
-          </button>
-          {activeAccordion === 3 && (
-            <ul className="accordion-list">
-              <li>O&M Manual Consolidation</li>
-              <li>Spare Parts Management</li>
-              <li>O&M Execution & Support</li>
-              <li>Stores & Logistics Management</li>
-            </ul>
-          )}
-        </div>
-        <div className="service-image">
-          <img src="../../../public/Images/Post-Commissioning & O&M.jpg" alt="O&M Services" />
-        </div>
-      </section>
-
-      {/* Industries Grid */}
-      <section className="industries-section" data-aos="fade-up">
-        <h2>Industries & Sectors We Serve</h2>
-        <div className="industries-grid">
-          <div className="industry-card"><FaWater /><h3>Water & Wastewater</h3><p>Softener, DM, STP, ETP, Desalination, ZLD</p></div>
-          <div className="industry-card"><FaIndustry /><h3>Marine & Civil Works</h3><p>Offshore pipelines, harbors, dams, infrastructure</p></div>
-          <div className="industry-card"><FaBolt /><h3>Power Plants</h3><p>Diesel, Thermal, CHP/AHP, Electrical BOP</p></div>
-          <div className="industry-card"><FaFlask /><h3>Refineries & Chemicals</h3><p>Maintenance, revamps, sulfuric/phosphoric plants</p></div>
-          <div className="industry-card"><FaLeaf /><h3>Food & Biotech</h3><p>Starch, Glucose, Spirulina, Chlorella culture</p></div>
-          <div className="industry-card"><FaCogs /><h3>Pharma</h3><p>API plants, fermentation-based projects</p></div>
-        </div>
-      </section>
-
-      {/* Specialized Solutions */}
-      <section className="specialized-section" data-aos="fade-up">
-        <h2>Specialized Solutions</h2>
-        <div className="specialized-grid">
-          <div><FaLeaf /><p>Green Hydrogen</p></div>
-          <div><FaRecycle /><p>Waste-to-Energy</p></div>
-          <div><FaCogs /><p>Automation & Control</p></div>
-          <div><FaIndustry /><p>Cross-Country Pipelines</p></div>
-          <div><FaBolt /><p>Pelletization & Briquetting</p></div>
-        </div>
-      </section>
-
-
     </div>
   );
 };

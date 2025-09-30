@@ -54,18 +54,23 @@ const Navbar = () => {
               </span>
               <ul className={`dropdown-menu ${dropdownOpen ? "open" : ""}`}>
                 <li><Link to="/services" onClick={closeMenu}>All Services</Link></li>
-                <li><Link to="/services/pre-bid" onClick={closeMenu}>Pre-Bid</Link></li>
-                <li><Link to="/services/execution" onClick={closeMenu}>Contract Execution</Link></li>
-                <li><Link to="/services/o-m" onClick={closeMenu}>O&M</Link></li>
-                <li><Link to="/services/water" onClick={closeMenu}>Water & Wastewater</Link></li>
-                <li><Link to="/services/power" onClick={closeMenu}>Power Plants</Link></li>
-                <li><Link to="/services/pharma" onClick={closeMenu}>Pharma & Biotech</Link></li>
+                <li><Link to="/services/feasibility" onClick={closeMenu}>Feasibility & DPR Studies</Link></li>
+                <li><Link to="/services/pretender" onClick={closeMenu}>Pre-Tender Services</Link></li>
+                <li><Link to="/services/posttender" onClick={closeMenu}>Post-Tender Services</Link></li>
+                <li><Link to="/services/consultancy" onClick={closeMenu}>Consultancy Services</Link></li>
+                <li><Link to="/services/epc" onClick={closeMenu}>EPC of Specialized Projects</Link></li>
+                <li><Link to="/services/swro" onClick={closeMenu}>Specialized SWRO Studies</Link></li>
+                <li><Link to="/services/pmc" onClick={closeMenu}>Project Management Consultancy</Link></li>
+                <li><Link to="/services/business" onClick={closeMenu}>Profitability & Business Studies</Link></li>
+
               </ul>
             </li>
           )}
           {/* Mobile tap dropdown */}
+          {/* Mobile tap dropdown */}
           {isMobile && (
-            <li className="dropdown"
+            <li
+              className={`dropdown ${dropdownOpen ? "active" : ""}`}
               onClick={() => setDropdownOpen((open) => !open)}
             >
               <span>
@@ -73,15 +78,18 @@ const Navbar = () => {
               </span>
               <ul className={`dropdown-menu ${dropdownOpen ? "open" : ""}`}>
                 <li><Link to="/services" onClick={closeMenu}>All Services</Link></li>
-                <li><Link to="/services/pre-bid" onClick={closeMenu}>Pre-Bid</Link></li>
-                <li><Link to="/services/execution" onClick={closeMenu}>Contract Execution</Link></li>
-                <li><Link to="/services/o-m" onClick={closeMenu}>O&M</Link></li>
-                <li><Link to="/services/water" onClick={closeMenu}>Water & Wastewater</Link></li>
-                <li><Link to="/services/power" onClick={closeMenu}>Power Plants</Link></li>
-                <li><Link to="/services/pharma" onClick={closeMenu}>Pharma & Biotech</Link></li>
+                <li><Link to="/services/feasibility" onClick={closeMenu}>Feasibility & DPR Studies</Link></li>
+                <li><Link to="/services/pretender" onClick={closeMenu}>Pre-Tender Services</Link></li>
+                <li><Link to="/services/posttender" onClick={closeMenu}>Post-Tender Services</Link></li>
+                <li><Link to="/services/consultancy" onClick={closeMenu}>Consultancy Services</Link></li>
+                <li><Link to="/services/epc" onClick={closeMenu}>EPC of Specialized Projects</Link></li>
+                <li><Link to="/services/swro" onClick={closeMenu}>Specialized SWRO Studies</Link></li>
+                <li><Link to="/services/pmc" onClick={closeMenu}>Project Management Consultancy</Link></li>
+                <li><Link to="/services/business" onClick={closeMenu}>Profitability & Business Studies</Link></li>
               </ul>
             </li>
           )}
+
           <li>
             <Link to="/projects" onClick={closeMenu}>Projects</Link>
           </li>

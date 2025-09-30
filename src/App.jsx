@@ -17,8 +17,7 @@ import Projects from './pages/Projects/Projects';
 import ProjectDetail from './pages/Projects/ProjectDetail';
 
 import ScrollToTop from './components/ScrollToTop';
-
-
+import ServiceDetail from './pages/Services/ServiceDetail';
 function App() {
   return (
     <>
@@ -35,6 +34,8 @@ function App() {
 
         <Route path="/services/water" element={<Water />} />
         <Route path="/projects/:id" element={<ProjectDetail />} />
+
+        <Route path="/services/:id" element={<ServiceDetail />} />
       </Routes>
 
       <Footer />
