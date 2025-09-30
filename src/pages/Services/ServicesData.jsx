@@ -3,7 +3,7 @@ const serviceData = {
     title: "Feasibility & DPR Studies",
     subtitle: "Turning concepts into viable, bankable projects.",
     image:
-      "https://images.unsplash.com/photo-1581091215367-59ab6c0b6b1f?auto=format&fit=crop&w=1200&q=80",
+      "https://plus.unsplash.com/premium_photo-1661610778702-371e7bd35cac?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     overview:
       "Our feasibility and DPR studies provide a comprehensive analysis of water, wastewater, and desalination projects. We deliver technical, financial, and environmental insights that help clients minimize risks and maximize project success.",
     offerings: [
@@ -49,7 +49,7 @@ const serviceData = {
     title: "Post-Tender Services",
     subtitle: "Ensuring smooth project execution after contract award.",
     image:
-      "https://images.unsplash.com/photo-1581091012184-5c55f54da4e9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     overview:
       "Our post-tender services include project management consultancy, schedule reviews, and cost optimization, ensuring your awarded project is executed efficiently.",
     offerings: [
@@ -91,7 +91,7 @@ const serviceData = {
     title: "EPC of Specialized Projects",
     subtitle: "Full-scale engineering, procurement, and construction delivery.",
     image:
-      "https://images.unsplash.com/photo-1503389152951-9f343605f61c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1665564807063-d306ea1d7876?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fEVQQyUyMG9mJTIwU3BlY2lhbGl6ZWQlMjBQcm9qZWN0c3xlbnwwfDB8MHx8fDA%3D",
     overview:
       "We deliver turnkey EPC projects across water, wastewater, and desalination sectors, including subsea pipelines, STPs, and ZLD plants.",
     offerings: [
@@ -113,7 +113,7 @@ const serviceData = {
     title: "Specialized SWRO Studies",
     subtitle: "Deep technical studies for advanced desalination projects.",
     image:
-      "https://images.unsplash.com/photo-1603398938378-df7d23fae6c0?auto=format&fit=crop&w=1200&q=80",
+      "https://plus.unsplash.com/premium_photo-1745056197520-50c8a6bb9f64?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     overview:
       "We conduct specialized studies for seawater reverse osmosis plants, covering oceanography, plant design, and environmental impact.",
     offerings: [

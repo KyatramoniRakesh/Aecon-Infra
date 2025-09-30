@@ -73,53 +73,9 @@ const ServiceDetail = () => {
         </div>
       </section>
 
-      {/* STATS */}
-      {service.stats && (
-        <section className="stats">
-          {service.stats.map((stat, index) => (
-            <div
-              key={index}
-              className="stat-box"
-              data-aos="fade-up"
-              data-aos-delay={index * 200}
-            >
-              <h2>{stat.number}</h2>
-              <p>{stat.label}</p>
-            </div>
-          ))}
-        </section>
-      )}
+     
 
-      {/* PROJECTS */}
-      {service.projects && (
-        <section className="projects">
-          <h2 data-aos="fade-up">Highlighted Projects</h2>
-          <div className="project-grid">
-            {service.projects.map((proj, index) => (
-              <div
-                key={index}
-                className="project-card"
-                data-aos="fade-up"
-                data-aos-delay={index * 200}
-              >
-                <h3>{proj.name}</h3>
-                <p>
-                  📍 {proj.location} <br /> 👤 {proj.client}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* CTA */}
-      <section className="cta" data-aos="zoom-in">
-        <h2>Looking for {service.title} expertise?</h2>
-        <p>Let’s collaborate and bring your project to life.</p>
-        <Link to="/contact" className="cta-btn">
-          Contact Us
-        </Link>
-      </section>
+ 
     </div>
   );
 };

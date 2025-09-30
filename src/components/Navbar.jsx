@@ -67,7 +67,6 @@ const Navbar = () => {
             </li>
           )}
           {/* Mobile tap dropdown */}
-          {/* Mobile tap dropdown */}
           {isMobile && (
             <li
               className={`dropdown ${dropdownOpen ? "active" : ""}`}

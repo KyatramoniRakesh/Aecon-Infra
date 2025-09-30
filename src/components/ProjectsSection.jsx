@@ -1,39 +1,41 @@
 import React from "react";
 import "../CSS/ProjectsSection.css";
 import HydrogenImg from "../Images/Hydrogen Pilot Plant.jpg";
+import { Link } from "react-router-dom";
+
 
 const projects = [
   {
     id: 1,
     title: "Maldives Water Supply",
     description: "Sustainable water infrastructure for island communities.",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e", 
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
   },
   {
     id: 2,
     title: "Ennore Port Expansion",
     description: "Marine works and port development for heavy cargo handling.",
-    image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29", 
+    image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
   },
   {
     id: 3,
     title: "Hydrogen Pilot Plant",
     description: "Green hydrogen production for future energy needs.",
-    image: HydrogenImg, 
+    image: HydrogenImg,
   },
 ];
 
 const ProjectsSection = () => {
   return (
     <section className="projects">
-      <div className="projects-container">
+      <div className="projects-container1">
         <h2 className="section-title">Featured Projects</h2>
-        <div className="projects-grid">
+        <div className="projects-grid1">
           {projects.map((project) => (
-            <div key={project.id} className="project-card">
-              <div className="project-image">
+            <div key={project.id} className="project-card1">
+              <div className="project-image1">
                 <img src={project.image} alt={project.title} />
-                <div className="overlay">
+                <div className="overlay1">
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
                 </div>
@@ -42,7 +44,9 @@ const ProjectsSection = () => {
           ))}
         </div>
         <div className="projects-btn">
-          <button>View All Projects</button>
+          <Link to="/projects">
+            <button>View All Projects</button>
+          </Link>
         </div>
       </div>
     </section>
